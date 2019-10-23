@@ -39,8 +39,10 @@ class ofxWMFVideoPlayer {
 
 		bool _sharedTextureCreated;
 		
+protected:
 		ofTexture _tex;
-	
+private:
+
 		BOOL InitInstance();
 
 		
