@@ -89,8 +89,6 @@ private:
 	 void				setLoop(bool isLooping);
 	 bool				isLooping() { return _isLooping; }
 
-
-
 	
 
 
@@ -98,6 +96,7 @@ private:
 
 	void draw(int x, int y , int w, int h);
 	void draw(int x, int y) { draw(x,y,getWidth(),getHeight()); }
+	void drawSubsection(int x, int y, int w, int h, int sx, int sy, int sw, int sh);
 
 
 	HWND getHandle() { return _hwndPlayer;}

@@ -175,6 +175,12 @@ void ofxWMFVideoPlayer::forceExit()
 
  }
 
+ void ofxWMFVideoPlayer::drawSubsection(int x, int y, int w, int h, int sx, int sy, int sw, int sh) {
+	 _player->m_pEVRPresenter->lockSharedTexture();
+	 _tex.drawSubsection(x, y, w, h, sx, sy, sw, sh);
+	 _player->m_pEVRPresenter->unlockSharedTexture();
+ }
+
 
 bool  ofxWMFVideoPlayer:: isPlaying() {
 	return _player->GetState() == Started;
@@ -278,6 +284,7 @@ float	ofxWMFVideoPlayer::getHeight() { return _player->getHeight(); }
 float	ofxWMFVideoPlayer::getWidth() { return _player->getWidth(); }
 
 void  ofxWMFVideoPlayer::setLoop(bool isLooping) { _isLooping = isLooping; _player->setLooping(isLooping); }
+
 
 
 
